@@ -1,0 +1,260 @@
+.initial * {
+  all: initial;
+}
+/*Initial settings*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  text-decoration: none;
+} 
+body {
+	font-family: Lato, Arial, Helvetica, sans-serif;
+	text-align: center;
+	background-color: white;
+	padding: 0;
+	margin: 0;
+}
+.border {
+	max-width: 1200px;
+    margin: 3em auto;
+    padding: 5.1rem 2rem;
+	border: 2px solid #333;
+	border-top: 0.66em solid #C2410C;
+	background-color: white;
+	color: #1F1F1F;
+	text-align: left;
+	width: 99%;
+	overflow: auto;
+}
+/*Media queries*/
+@media only screen and (max-width: 1250px) {
+.main {
+	width: 95%;
+}
+nav ul {
+	display: flex;
+	gap: 0.8rem;
+	align-items: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+}
+header {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	left: 0;
+	width: 100%; /* Ensures it spans the viewport */
+	display: flex;
+    justify-content: space-between;
+    align-items: center;	
+    padding: 0.05rem 1.5rem;
+	background-color: #1F1F1F;
+	color: white;
+	width: 100%;
+}
+header a {
+	display: inline-block;
+	color: #1F1F1F;
+	background-color: white;
+	text-decoration: none;
+	border: 0.45em solid #C2410C; 
+	border-radius: 10%;
+	padding: 0.25em;
+}
+h1 {
+	font-size: 1.23em;
+}
+logo {
+	color:white; 
+	background-color: #1F1F1F; 
+	width: 4.5em; 
+	border: 0.2.5em red; 
+	border-radius: 45%; 
+	float: left;
+}
+h2 {
+	color: #1F1F1F;
+	display: inline-block;
+    border-bottom: 3px solid #C2410C;
+    padding-bottom: 0.1rem;
+}
+nav {
+	font-size: 1.2em;
+	font-weight: bold;
+	width: 75%;
+	float: right;
+}
+nav ul {
+	padding: 0;
+	margin: 0.5em;
+	list-style-type: none;
+	text-align: right;
+}
+nav li {
+	display: inline;
+	padding: 0.3em 1em 0em 0em;
+}
+nav a {
+	display: inline-block;
+	text-decoration: none;
+	color: #1F1F1F;
+}
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.focus-card {
+    border: 1px solid #333;
+	border-top: 0.33em solid #C2410C;
+    padding: 1.5rem;
+    background-color: white;
+}
+.contact-card {
+  color: #1F1F1F; /* Or your preferred text color */
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+/* Creating a custom underline using a pseudo-element */
+.contact-card::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #C2410C; /* Matches your orange accent color */
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+/* Smoothly animate the underline on hover */
+.contact-card:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.closing-statement {
+    margin: 2rem auto;
+    width: 85%;
+    line-height: 1.7;
+    font-style: italic;
+}
+img {
+	max-width: 100%;
+	opacity: 0.81;
+    border-radius: 8px;
+	border: 2px solid #1F1F1F;
+	padding: 0.1em;
+	width: 90px;	
+	float: right;
+} 
+.square {
+	border: 0.66em solid #1F1F1F;
+	border-top: 0.66em solid #C2410C;
+	background-color: white;
+	text-align: center;
+	font-weight: bold;
+	margin: 1em;
+	padding: 1em;
+	width: 30%;
+	float: left;	
+}
+.value-blocks-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.value-block {
+  flex: 1;
+  border: 4px solid #1F1F1F; /* Recreates your bold black frames */
+  padding: 24px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 0px rgba(0,0,0,0.1); /* Subtle depth */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.value-block h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #000000;
+  /* border-left: 4px solid #ff4500; (Optional: add if you want your signature orange accent line here) */
+  /* padding-left: 8px; */
+}
+
+.value-block p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333333; /* Slightly softer black for easier reading */
+  margin: 0;
+}
+
+/* Responsive: Stack them on mobile screens */
+@media (max-width: 768px) {
+  .value-blocks-container {
+    display: none;
+  }
+}
+footer {
+	margin: 0.2em;
+	text-align: center;
+	background-color: #1F1F1F;
+	color: white;
+	padding: 0.2em;
+	width:99%;
+}
+.site-footer {
+  background-color: #1F1F1F; /* Matches your solid black footer */
+  padding: 20px 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between; /* Pushes one to the left, one to the right */
+  align-items: center;
+}
+
+.site-footer p {
+  color: #ffffff;
+  font-size: 0.85rem; /* Keeps text small and unobtrusive */
+  margin: 0;
+  font-family: sans-serif; /* Use your global font variable if preferred */
+}
+
+/* Make the tech credits slightly lower contrast so it doesn't compete with the copyright */
+.footer-right {
+  color: #b3b3b3 !important; 
+}
+
+/* Responsive: Center stack on smaller screens */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}	
+a:hover {
+	transform: scale(1, 1.25);
+	color: #C2410C;
+	background-color: #1F1F1F;
+}
+
